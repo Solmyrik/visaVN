@@ -1,0 +1,108 @@
+.work {
+  &__title {
+    font-size: 58px;
+    line-height: 120%;
+    font-weight: 700;
+    margin-bottom: 40px;
+    @include gradient;
+    @media (max-width: $mob) {
+      padding-top: 30px;
+      font-size: 36px;
+    }
+  }
+  &__items {
+    flex: 0 1 80%;
+  }
+
+  &__item {
+    //  padding: 30px 0px;
+    &:not(:last-child) {
+      margin-bottom: 40px;
+    }
+  }
+
+  &__label {
+    font-size: 22px;
+    font-weight: 600;
+    position: relative;
+    cursor: pointer;
+    &.active {
+      .work__image {
+        border-radius: 15px 15px 0px 0px;
+      }
+    }
+  }
+  &__name {
+    position: absolute;
+    bottom: 30px;
+    left: 15px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 30px;
+    font-weight: 700;
+    color: $white;
+    width: 100%;
+    @media (max-width: $mob) {
+      font-size: 20px;
+    }
+  }
+  &__content {
+    padding-left: 20px;
+    max-height: 0px;
+    overflow: hidden;
+    transition: all 0.5s;
+    line-height: 150%;
+    background-color: #515e6e;
+    border-radius: 0px 0px 15px 15px;
+    p {
+      &:not(:last-child) {
+        margin-bottom: 7.5px;
+      }
+    }
+    h4 {
+      margin-top: 20px;
+      font-size: 24px;
+      font-weight: 700;
+    }
+  }
+  &__icons {
+    img {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+    }
+  }
+  &__counres {
+    display: flex;
+    flex-wrap: wrap;
+    .work__icons {
+      img {
+        border-radius: 50%;
+      }
+    }
+  }
+  &__counry {
+    flex: 0 1 25%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 0px;
+    cursor: pointer;
+    img {
+      width: 30px;
+      height: 30px;
+    }
+    @media (max-width: $mob) {
+      flex: 0 1 50%;
+    }
+  }
+
+  &__image {
+    padding-bottom: 30%;
+    border-radius: 15px;
+    @media (max-width: $mob) {
+      padding-bottom: 60%;
+    }
+  }
+}

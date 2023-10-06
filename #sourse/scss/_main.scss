@@ -1,0 +1,217 @@
+.main {
+  position: relative;
+  &__bg {
+    width: 100vw;
+    height: calc(100vh - 80px);
+    position: relative;
+    // &::before {
+    //   position: absolute;
+    //   content: '';
+    //   background-color: #000000;
+    //   opacity: 0.35;
+    //   top: 0;
+    //   left: 0;
+    //   width: 100%;
+    //   height: 100%;
+    // }
+    @media (max-height: 680px) {
+      height: 700px;
+    }
+    @media (max-height: 750px) and (max-width: $mob) {
+      height: 700px;
+    }
+    @media (max-width: 375px) {
+      height: 800px;
+    }
+  }
+
+  &__container {
+    position: absolute;
+    top: 25px;
+    left: 50%;
+    transform: translate(-50%, 0);
+    color: $white;
+    width: 970px;
+    @media (max-width: $tablet) {
+      width: 100%;
+      top: 25px;
+    }
+  }
+
+  &__content {
+  }
+
+  &__title {
+    font-size: 60px;
+    text-align: center;
+    font-weight: 700;
+    margin-bottom: 30px;
+    @include gradient;
+    @media (max-width: $mob) {
+      font-size: 35px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-weight: 500;
+    font-size: 30px;
+    margin-bottom: 50px;
+    line-height: 110%;
+    @media (max-width: $mob) {
+      font-size: 18px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__quiz {
+  }
+}
+
+.quiz {
+  background-color: rgba(59, 59, 59, 0.849);
+  color: $white;
+  padding: 40px 30px;
+  border-radius: 10px;
+  @media (max-width: $mobSmall) {
+    padding: 20px 15px;
+  }
+  &__body {
+  }
+
+  &__title {
+    text-align: center;
+    font-size: 28px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    @media (max-width: $mob) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__subtitle {
+    text-align: center;
+    font-size: 22px;
+    line-height: 130%;
+    margin-bottom: 40px;
+    @media (max-width: $mob) {
+      font-size: 16px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 30px;
+    @media (max-width: $mob) {
+      flex-direction: column;
+      row-gap: 20px;
+    }
+  }
+
+  &__item {
+    flex: 0 1 50%;
+  }
+
+  &__name {
+    font-weight: 500;
+    margin-bottom: 15px;
+  }
+
+  &__counter {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+
+  &__decrement {
+    background-color: $blue;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  &__count {
+    font-size: 20px;
+    font-weight: 700;
+    width: 40px;
+    text-align: center;
+  }
+
+  &__increment {
+    background-color: $blue;
+    width: 35px;
+    height: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: $white;
+    border-radius: 50%;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  &__select {
+    height: 50px;
+    background-color: $blue;
+    border-radius: 5px;
+    color: $white;
+    font-size: 16px;
+    padding: 10px;
+    width: 160px;
+  }
+
+  &__choices {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+
+  &__choice {
+    cursor: pointer;
+    background-color: $light;
+    color: $black;
+    padding: 5px 10px;
+    border-radius: 5px;
+    &.active {
+      background-color: $blue;
+      color: $white;
+    }
+  }
+  &__buttons {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 20px;
+    @media (max-width: $mob) {
+      margin-top: 40px;
+    }
+  }
+  &__button {
+    height: 50px;
+    font-size: 20px;
+    font-weight: 500;
+    color: $white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(55.17deg, #42f6de 15.27%, #fafe85 85.1%);
+    border-radius: 10px;
+    width: 300px;
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      opacity: 0.7;
+    }
+    @media (max-width: $mob) {
+      width: 100%;
+    }
+  }
+}

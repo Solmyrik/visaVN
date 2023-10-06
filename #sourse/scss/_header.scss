@@ -1,0 +1,211 @@
+.header {
+  position: relative;
+  // background: linear-gradient(55.17deg, #919191 15.27%, #495565 85.1%);
+  // background-color: #919191;
+  &__burger {
+  }
+
+  &__container {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__logo {
+    img {
+      width: 200px;
+      @media (max-width: $mob) {
+        width: 175px;
+      }
+      @media (max-width: 370px) {
+        width: 150px;
+      }
+    }
+    position: relative;
+    z-index: 11;
+  }
+
+  &__menu {
+  }
+  &__phones {
+    display: flex;
+    gap: 20px;
+    @media (max-width: $tablet) {
+      gap: 55px;
+      margin-right: 50px;
+    }
+    @media (max-width: 405px) {
+      gap: 35px;
+    }
+  }
+
+  &__phone {
+    color: $white;
+    transition: all 0.3s;
+    &:hover {
+      color: $light-blue;
+    }
+    @media (max-width: $mob) {
+      // margin-right: 50px;
+      p {
+        display: none;
+      }
+    }
+    position: relative;
+    z-index: 6;
+    img {
+      display: none;
+      @media (max-width: $mob) {
+        display: block;
+        width: 30px;
+        height: 30px;
+      }
+    }
+    // &::after {
+    //   position: absolute;
+    //   content: 'Москва';
+    //   top: -18px;
+    //   left: 50%;
+    //   transform: translate(-50%, 0);
+    //   font-size: 15px;
+    //   color: $white;
+    //   font-weight: 700;
+    //   @media (max-width: 405px) {
+    //     font-size: 12px;
+    //   }
+    // }
+    &::before {
+      position: absolute;
+      content: 'позвонить';
+      bottom: -18px;
+      left: 50%;
+      transform: translate(-50%, 0);
+      font-size: 15px;
+      color: $blue;
+      @media (max-width: 405px) {
+        font-size: 12px;
+      }
+    }
+    &:nth-child(2) {
+      &::after {
+        content: 'Красноярск';
+      }
+    }
+  }
+}
+.menu {
+  &__body {
+    @media (max-width: $mob) {
+      transform: translate(100%, 0%);
+      transition: transform 0.8s;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: auto;
+      padding: 80px 10px 30px 10px;
+      background-color: $gray;
+      z-index: 5;
+
+      &._active {
+        transform: translate(0px, 0%);
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    // gap: 30px;
+    align-items: center;
+    @media (max-width: $mob) {
+      padding-top: 30px;
+      display: block;
+      text-align: center;
+    }
+  }
+
+  &__item {
+    &:first-child {
+      padding-right: 30px;
+    }
+    &:last-child {
+      padding-left: 30px;
+    }
+    @media (max-width: $mob) {
+      margin-bottom: 20px;
+      &:first-child {
+        padding: 0;
+        padding-bottom: 30px;
+      }
+      &:last-child {
+        padding: 0;
+        padding-top: 30px;
+      }
+    }
+  }
+
+  &__link {
+    text-transform: uppercase;
+    color: $white;
+    font-weight: 500;
+    transition: all 0.3s;
+    &:hover {
+      color: $light-blue;
+    }
+    @media (max-width: $mob) {
+      font-size: 24px;
+    }
+  }
+}
+
+.header__burger {
+  @media (max-width: $mob) {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 18px;
+    cursor: pointer;
+    z-index: 10;
+    right: 15px;
+    top: 45px;
+    transform: translate(0, -50%);
+
+    span {
+      transition: 0.3s all;
+      top: calc(50% - 1px);
+      left: 0px;
+      position: absolute;
+      width: 100%;
+      height: 2px;
+      background-color: $white;
+
+      &:first-child {
+        top: 0px;
+      }
+
+      &:last-child {
+        top: auto;
+        bottom: 0px;
+      }
+    }
+
+    &._active {
+      span {
+        transform: scale(0);
+        background-color: $white;
+
+        &:first-child {
+          transform: rotate(-45deg);
+          top: 8px;
+        }
+
+        &:last-child {
+          transform: rotate(45deg);
+          bottom: 8px;
+        }
+      }
+    }
+  }
+}

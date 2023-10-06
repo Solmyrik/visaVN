@@ -1,0 +1,60 @@
+@import '_null.scss';
+@import '_mixin';
+@import '_popup';
+.wrapper {
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+html {
+  &.lock {
+    overflow: hidden;
+  }
+}
+body {
+  background-color: $main;
+  color: $white;
+  font-size: 18px;
+  font-family: 'Roboto', sans-serif;
+  &._lock {
+    overflow: hidden;
+  }
+  &.lock {
+    overflow: hidden;
+  }
+
+  &::-webkit-scrollbar {
+    width: 8px;
+  }
+  &::-webkit-scrollbar-thumb {
+    background-color: #8e8e8e;
+    border-radius: 20px;
+  }
+  ::-webkit-scrollbar-track {
+    background-color: #fff;
+    border-radius: 20px;
+  }
+}
+main {
+  flex: 100%;
+}
+
+[class*='__container'] {
+  max-width: 1410px;
+  margin: 0 auto;
+  padding: 0px 15px;
+}
+
+@import '_header';
+@import '_intro';
+@import '_work';
+@import '_vn';
+@import '_advantages';
+@import '_arrange';
+@import '_better';
+@import '_faq';
+@import '_citizenship';
+@import '_contacts';
+@import '_comment';
+@import '_footer';

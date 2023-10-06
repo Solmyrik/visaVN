@@ -1,0 +1,60 @@
+.footer {
+  //change
+  // background-color: $light;
+  background: linear-gradient(55.17deg, #14212a 15.27%, #495565 85.1%);
+  padding: 50px 0px 30px 0px;
+  @media (max-width: $mob) {
+    padding: 50px 0px 85px 0px;
+  }
+  &__container {
+  }
+  //change
+  .header__phones {
+    margin: 0;
+    @media (max-width: $tablet) {
+      margin-right: 10px;
+    }
+  }
+  &__body {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 70px;
+    align-items: center;
+    @media (max-width: $mob) {
+      margin-bottom: 20px;
+    }
+  }
+
+  &__copy {
+    text-align: center;
+    font-size: 14px;
+    font-weight: 500;
+    display: flex;
+    justify-content: space-between;
+    @media (max-width: $mob) {
+      margin-top: 50px;
+      flex-direction: column;
+      gap: 20px;
+    }
+    a {
+      color: white;
+      transition: color 0.3s;
+      span {
+        font-weight: 700;
+      }
+      &:hover {
+        color: $light-blue;
+      }
+    }
+  }
+  .header__phone {
+    margin-right: 10px;
+  }
+}
+.header {
+  &__logo {
+  }
+
+  &__phone {
+  }
+}

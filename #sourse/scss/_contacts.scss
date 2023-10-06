@@ -1,0 +1,48 @@
+.contact {
+  &__container {
+  }
+
+  &__title {
+    font-size: 58px;
+    line-height: 120%;
+    font-weight: 700;
+    margin-bottom: 40px;
+    text-align: center;
+    @include gradient;
+    @media (max-width: $mob) {
+      padding-top: 30px;
+      font-size: 36px;
+    }
+  }
+
+  &__column {
+    margin-bottom: 40px;
+  }
+
+  &__name {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 20px;
+  }
+
+  &__adres {
+    font-size: 20px;
+    @include gradient;
+    text-align: center;
+    margin-bottom: 20px;
+    @media (max-width: $mob) {
+      font-size: 16px;
+    }
+  }
+
+  &__map {
+    width: 100%;
+    height: 400px;
+    @media (max-width: $mob) {
+      height: 300px;
+    }
+  }
+}
+.map-1 {
+}

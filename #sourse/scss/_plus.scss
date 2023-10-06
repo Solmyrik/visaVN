@@ -1,0 +1,65 @@
+.plus {
+  // background-color: #3f3f3f;
+  padding: 30px 0px;
+  &__container {
+  }
+
+  &__title {
+  }
+
+  &__body {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    row-gap: 60px;
+    @media (max-width: $tablet) {
+      flex-direction: column;
+    }
+  }
+
+  &__item {
+    flex: 0 1 calc(50% - 20px);
+    display: flex;
+    gap: 30px;
+    @media (max-width: $tablet) {
+      gap: 15px;
+    }
+  }
+
+  &__icon {
+    flex: 0 0 60px;
+    height: 60px;
+    background: linear-gradient(55.17deg, #42f6de 15.27%, #fafe85 85.1%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    img {
+      width: 60%;
+    }
+    @media (max-width: $tablet) {
+      flex: 0 0 45px;
+      height: 45px;
+    }
+  }
+
+  &__name {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    @media (max-width: $tablet) {
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+  }
+
+  &__content {
+  }
+
+  &__text {
+    line-height: 140%;
+    @media (max-width: $tablet) {
+      font-size: 14px;
+    }
+  }
+}
