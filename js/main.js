@@ -58,3 +58,14 @@ function feqHandler(e) {
     currentContent.style.maxHeight = 0;
   }
 }
+
+////
+const popupChoice = document.querySelectorAll('.popup__choice');
+const popupSelect = document.querySelector('.popup-form__select');
+
+popupChoice.forEach((popup) => {
+  popup.addEventListener('click', (e) => {
+    const current = e.currentTarget.dataset.choise;
+    popupSelect.value = current;
+  });
+});
