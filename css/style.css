@@ -1371,8 +1371,8 @@ main {
 
 .arrange__item {
   -webkit-box-flex: 0;
-      -ms-flex: 0 1 16.6666666%;
-          flex: 0 1 16.6666666%;
+      -ms-flex: 0 1 25%;
+          flex: 0 1 25%;
   text-align: center;
   background-color: #515e6e;
   padding: 30px 13px;
